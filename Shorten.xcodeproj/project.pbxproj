@@ -13,6 +13,10 @@
 		8602F7322499224F00F08CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8602F7302499224F00F08CC7 /* Main.storyboard */; };
 		8602F7342499225300F08CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8602F7332499225300F08CC7 /* Assets.xcassets */; };
 		8602F7372499225300F08CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8602F7352499225300F08CC7 /* LaunchScreen.storyboard */; };
+		8602F742249923AF00F08CC7 /* ShortenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602F741249923AF00F08CC7 /* ShortenManager.swift */; };
+		8602F74424992AB800F08CC7 /* ShortenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602F74324992AB800F08CC7 /* ShortenData.swift */; };
+		8602F7472499FDEC00F08CC7 /* ShortenDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8602F7452499FDEC00F08CC7 /* ShortenDataModel.xcdatamodeld */; };
+		8602F749249A008800F08CC7 /* ShortenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602F748249A008800F08CC7 /* ShortenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		8602F7332499225300F08CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8602F7362499225300F08CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8602F7382499225300F08CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8602F741249923AF00F08CC7 /* ShortenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenManager.swift; sourceTree = "<group>"; };
+		8602F74324992AB800F08CC7 /* ShortenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenData.swift; sourceTree = "<group>"; };
+		8602F7462499FDEC00F08CC7 /* ShortenHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShortenHistory.xcdatamodel; sourceTree = "<group>"; };
+		8602F748249A008800F08CC7 /* ShortenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		8602F7292499224F00F08CC7 /* Shorten */ = {
 			isa = PBXGroup;
 			children = (
+				8602F7402499225E00F08CC7 /* Model */,
+				8602F73F2499225D00F08CC7 /* View */,
+				8602F73E2499225900F08CC7 /* Controller */,
 				8602F72A2499224F00F08CC7 /* AppDelegate.swift */,
 				8602F72C2499224F00F08CC7 /* SceneDelegate.swift */,
-				8602F72E2499224F00F08CC7 /* ViewController.swift */,
-				8602F7302499224F00F08CC7 /* Main.storyboard */,
 				8602F7332499225300F08CC7 /* Assets.xcassets */,
 				8602F7352499225300F08CC7 /* LaunchScreen.storyboard */,
 				8602F7382499225300F08CC7 /* Info.plist */,
 			);
 			path = Shorten;
+			sourceTree = "<group>";
+		};
+		8602F73E2499225900F08CC7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8602F72E2499224F00F08CC7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8602F73F2499225D00F08CC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8602F7302499224F00F08CC7 /* Main.storyboard */,
+				8602F748249A008800F08CC7 /* ShortenTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8602F7402499225E00F08CC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8602F741249923AF00F08CC7 /* ShortenManager.swift */,
+				8602F74324992AB800F08CC7 /* ShortenData.swift */,
+				8602F7452499FDEC00F08CC7 /* ShortenDataModel.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8602F7472499FDEC00F08CC7 /* ShortenDataModel.xcdatamodeld in Sources */,
 				8602F72F2499224F00F08CC7 /* ViewController.swift in Sources */,
+				8602F742249923AF00F08CC7 /* ShortenManager.swift in Sources */,
 				8602F72B2499224F00F08CC7 /* AppDelegate.swift in Sources */,
+				8602F74424992AB800F08CC7 /* ShortenData.swift in Sources */,
+				8602F749249A008800F08CC7 /* ShortenTableViewCell.swift in Sources */,
 				8602F72D2499224F00F08CC7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8602F7452499FDEC00F08CC7 /* ShortenDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8602F7462499FDEC00F08CC7 /* ShortenHistory.xcdatamodel */,
+			);
+			currentVersion = 8602F7462499FDEC00F08CC7 /* ShortenHistory.xcdatamodel */;
+			path = ShortenDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8602F71F2499224F00F08CC7 /* Project object */;
 }
