@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shorten View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shorten" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShortenViewController" customModule="Shorten" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zun-T3-1aj">
-                                                    <rect key="frame" x="20" y="11" width="312.5" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="305" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21.5" id="qSf-Tm-kd2"/>
                                                     </constraints>
@@ -113,10 +113,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-BH-U9o">
-                                                    <rect key="frame" x="332.5" y="0.0" width="21.5" height="44"/>
+                                                    <rect key="frame" x="333" y="0.0" width="21" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43.5" id="2EU-dd-JiS"/>
-                                                        <constraint firstAttribute="width" constant="21.5" id="WSl-Oe-3oU"/>
+                                                        <constraint firstAttribute="width" constant="21" id="WSl-Oe-3oU"/>
                                                     </constraints>
                                                     <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="doc.on.clipboard" catalog="system"/>
@@ -127,13 +127,13 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="zun-T3-1aj" firstAttribute="leading" secondItem="xVK-gX-BJy" secondAttribute="leading" constant="20" id="1Jr-ya-eS0"/>
                                                 <constraint firstAttribute="bottom" secondItem="YYQ-BH-U9o" secondAttribute="bottom" id="6hm-W1-yVr"/>
                                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="YYQ-BH-U9o" secondAttribute="trailing" constant="20" id="BRY-f5-pJR"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zun-T3-1aj" secondAttribute="trailing" constant="40" id="Bsv-lo-ghz"/>
                                                 <constraint firstItem="zun-T3-1aj" firstAttribute="top" secondItem="xVK-gX-BJy" secondAttribute="topMargin" id="Dj7-pj-eKA"/>
                                                 <constraint firstItem="YYQ-BH-U9o" firstAttribute="top" secondItem="xVK-gX-BJy" secondAttribute="top" id="Iad-pm-eiU"/>
-                                                <constraint firstItem="YYQ-BH-U9o" firstAttribute="leading" secondItem="zun-T3-1aj" secondAttribute="trailing" id="Tvb-P4-J6n"/>
-                                                <constraint firstItem="zun-T3-1aj" firstAttribute="leading" secondItem="xVK-gX-BJy" secondAttribute="leading" constant="20" id="d8R-hy-Vvz"/>
+                                                <constraint firstItem="YYQ-BH-U9o" firstAttribute="leading" secondItem="zun-T3-1aj" secondAttribute="trailing" constant="8" id="h40-Hj-5oH"/>
                                                 <constraint firstItem="zun-T3-1aj" firstAttribute="bottom" secondItem="xVK-gX-BJy" secondAttribute="bottomMargin" id="opS-xU-2Rk"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -171,6 +171,7 @@
                     </view>
                     <connections>
                         <outlet property="sendButton" destination="zTy-TK-qV7" id="16J-QL-IKV"/>
+                        <outlet property="shareButton" destination="eU4-rf-L2H" id="bfd-WJ-dU6"/>
                         <outlet property="shortenTableView" destination="46g-vQ-Fcz" id="fmz-wO-2fP"/>
                         <outlet property="urlLabel" destination="l7w-VN-bys" id="tYL-4x-F3M"/>
                         <outlet property="urlTextField" destination="yHw-9r-FZ7" id="n92-tg-7DG"/>

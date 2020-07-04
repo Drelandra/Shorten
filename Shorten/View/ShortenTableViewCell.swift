@@ -19,9 +19,9 @@ class ShortenTableViewCell: UITableViewCell {
     }
 
     @IBAction func clipboardPressed(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         let pasteboard = UIPasteboard.general
         pasteboard.string = urlText.text
-        if let string = pasteboard.string {
-        }
     }
 }
