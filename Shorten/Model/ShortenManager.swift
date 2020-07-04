@@ -29,7 +29,6 @@ struct ShortenManager {
         
         request.httpBody = postString.data(using: String.Encoding.utf8);
         
-        //        let session = URLSession(configuration: .default)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 self.delegate?.didFailWithError(error: error!)
