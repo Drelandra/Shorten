@@ -12,11 +12,6 @@ class ShortenTableViewCell: UITableViewCell {
 
     @IBOutlet weak var urlText: UILabel!
     @IBOutlet weak var clipboardButton: UIButton!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
 
     @IBAction func clipboardPressed(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .light)
